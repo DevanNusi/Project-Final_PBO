@@ -33,11 +33,11 @@ public class AdminServicesImpl implements AdminServices{
         if (!isAdd) {
             input.nextLine();
         }
-        data.nama = input.nextLine();
+        data.setNama(input.nextLine());
         System.out.print("masukan harga : ");
-        data.harga = input.nextInt();
+        data.setHarga(input.nextInt());
         System.out.print("masukan stok : ");
-        data.stock = input.nextInt();
+        data.setStock(input.nextInt());
         return data;
     }
 

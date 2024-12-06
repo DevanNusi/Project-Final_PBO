@@ -34,7 +34,7 @@ public class TransactionServicesImpl implements TransactionServices{
         if(!listDataStock.isEmpty()){
             System.out.print("pilih jenis bensin yang tersedia : ");
             barisBensin = input.nextInt() -1;
-            dataPelangganSementara.setJenisBensin(listDataStock.get(barisBensin).nama);
+            dataPelangganSementara.setJenisBensin(listDataStock.get(barisBensin).getNama());
 
             System.out.print("Masukan nama Anda : ");
             input.nextLine();
@@ -47,7 +47,7 @@ public class TransactionServicesImpl implements TransactionServices{
             int banyakBensin = input.nextInt();
             dataPelangganSementara.setBanyakBensin(banyakBensin);
 
-            dataPelangganSementara.setTotalPembayaran(banyakBensin * listDataStock.get(barisBensin).harga);
+            dataPelangganSementara.setTotalPembayaran(banyakBensin * listDataStock.get(barisBensin).getHarga());
         }else {
             System.out.println("Stock bensin masih belum tersedia !!");
         }
